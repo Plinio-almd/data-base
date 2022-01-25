@@ -1,2 +1,2 @@
-# data-base
-Práticas e exercícios de bancos de dados
+# Bancos de Dados
+Repositório para salvar exercícios de bancos de dados.

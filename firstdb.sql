@@ -25,3 +25,13 @@ DELETE FROM pessoas WHERE id =3
 SELECT * FROM pessoas ORDER BY nome
 SELECT * FROM pessoas ORDER BY nascimento DESC
 SELECT * FROM pessoas ORDER BY nascimento ASC
+
+ALTER TABLE pessoas ADD genero VARCHAR(1) NOT NULL AFTER nascimento
+
+UPDATE pessoas SET genero='M' WHERE id=1;
+UPDATE pessoas SET genero='F' WHERE id=2;
+UPDATE pessoas SET genero='M' WHERE id=4;
+UPDATE pessoas SET genero='F' WHERE id=5;
+UPDATE pessoas SET genero='F' WHERE id=6;
+
+SELECT COUNT(id), genero FROM pessoas GROUP BY genero;

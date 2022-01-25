@@ -17,3 +17,11 @@ UPDATE pessoas SET nome='Jéssica Pereira' WHERE id=2;
 UPDATE pessoas SET nome='Maria Lili Alice' WHERE id=3;
 UPDATE pessoas SET nome='Lucas Silva' WHERE id=4;
 UPDATE pessoas SET nome='Maristela Claro' WHERE id=5;
+
+SELECT * FROM pessoas WHERE id=3
+
+DELETE FROM pessoas WHERE id =3
+
+SELECT * FROM pessoas ORDER BY nome
+SELECT * FROM pessoas ORDER BY nascimento DESC
+SELECT * FROM pessoas ORDER BY nascimento ASC

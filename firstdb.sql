@@ -39,3 +39,16 @@ SELECT COUNT(id), genero FROM pessoas GROUP BY genero;
 DROP DATABASE name_database;
 
 DROP TABLE name_table;
+
+ALTER TABLE `video` ADD CONSTRAINT `fk_author` FOREIGN KEY (`fk_author`) REFERENCES `author`(`id_author`) ON DELETE CASCADE ON UPDATE CASCADE; 
+
+SELECT * FROM `video` JOIN author ON video.fk_author = author.id_author;
+
+SELECT video.title, author.name FROM `video` JOIN author ON video.fk_author = author.id_author; 
+
+SELECT video.title,author.name,seo.category FROM `video` JOIN seo ON fk_seo=seo.id_seo JOIN author ON video.fk_author=author.id_author;
+
+SELECT playlist.name_pl, video.title, author.name FROM playlist 
+JOIN videos_playlist ON playlist.id_playlist=videos_playlist.fk_playlist 
+JOIN video ON video.id_video=videos_playlist.fk_videos
+JOIN author ON author.id_author=video.fk_author;

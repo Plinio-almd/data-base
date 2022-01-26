@@ -35,3 +35,7 @@ UPDATE pessoas SET genero='F' WHERE id=5;
 UPDATE pessoas SET genero='F' WHERE id=6;
 
 SELECT COUNT(id), genero FROM pessoas GROUP BY genero;
+
+DROP DATABASE name_database;
+
+DROP TABLE name_table;

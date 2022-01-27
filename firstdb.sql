@@ -52,3 +52,10 @@ SELECT playlist.name_pl, video.title, author.name FROM playlist
 JOIN videos_playlist ON playlist.id_playlist=videos_playlist.fk_playlist 
 JOIN video ON video.id_video=videos_playlist.fk_videos
 JOIN author ON author.id_author=video.fk_author;
+
+SELECT*FROM videos_canais AS vc JOIN videos AS v ON vc.fk_canal=v.id_video; 
+
+SELECT*FROM videos_canais AS vc JOIN videos AS v ON vc.fk_video=v.id_video
+JOIN canais AS c ON vc.fk_canal=c.id_canal;
+
+SELECT v.nome_video, v.nome_autor, c.nome_canal FROM videos_canais AS vc JOIN videos AS v ON vc.fk_video=v.id_video JOIN canais AS c ON vc.fk_canal=c.id_canal; 
